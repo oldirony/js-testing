@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/.bin/webpack-dev-server"
+    "start": "node ./node_modules/.bin/webpack-dev-server",
+    "test": "node ./node_modules/.bin/jest",
+    "test:watch": "node ./node_modules/.bin/jest --watch"
   },
   "author": "Raffaele Abramini",
   "license": "ISC",
@@ -15,5 +17,8 @@
     "babel-preset-stage-2": "^6.24.1",
     "webpack": "^3.7.1",
     "webpack-dev-server": "^2.9.1"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
   }
 }
