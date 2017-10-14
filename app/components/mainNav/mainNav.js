@@ -16,8 +16,14 @@ export default class MainNav {
 
 	constructor() {
 		this.elem = document.querySelector(MainNav.selectors.main);
+
+		if (!this.elem) return;
+
 		this.trigger = this.elem.querySelector(MainNav.selectors.trigger);
 		this.content = this.elem.querySelector(MainNav.selectors.content);
+
+		if (!this.trigger || !this.content) throw new Error(MainNav.errors.noElements);
+
 		this.isOpen = !this.elem.classList.contains(MainNav.classes.isHidden);
 
 		this.setOpeningState();
@@ -54,5 +60,11 @@ export default class MainNav {
 
 	updateTriggerText(newText) {
 		this.trigger.innerText = newText;
+	}
+
+	static errors = {
+		get noElements() {
+			return `${this.name} requires a ${this.selectors.button} and a ${this.selectors.content}.`
+		}
 	}
 }
