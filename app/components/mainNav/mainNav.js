@@ -64,7 +64,7 @@ export default class MainNav {
 
 	static errors = {
 		get noElements() {
-			return `${this.name} requires a ${this.selectors.button} and a ${this.selectors.content}.`
+			return `${MainNav.name} requires a ${MainNav.selectors.trigger} and a ${MainNav.selectors.content} element.`
 		}
 	}
 }
