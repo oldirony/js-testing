@@ -28,8 +28,8 @@ describe('On default scenarios', ()=> {
 		// Add the basic html structure.
 		document.body.innerHTML = `
 		<div class="article" data-js-main-nav>
-			<button></button>
-			<ul>
+			<button data-main-nav-trigger></button>
+			<ul data-main-nav-content>
 				<li>1</li>
 				<li>2</li>
 			</ul>

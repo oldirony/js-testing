@@ -1,8 +1,8 @@
 export default class MainNav {
 	static selectors = {
 		main: '[data-js-main-nav]',
-		trigger: 'button',
-		content: 'ul'
+		trigger: '[data-main-nav-trigger]',
+		content: '[data-main-nav-content]'
 	};
 
 	static classes = {
